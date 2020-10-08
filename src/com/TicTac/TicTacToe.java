@@ -9,3 +9,6 @@ public class TicTacToe {
 		return board;
 	}
 }
+public static void main(String args[]) {
+	TicTacToe b = new TicTacToe();
+	char[] board = b.createBoard();
