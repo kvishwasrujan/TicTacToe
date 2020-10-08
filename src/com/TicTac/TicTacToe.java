@@ -1,4 +1,6 @@
 package com.TicTac;
+import java.util.Arrays;
+import java.util.Scanner;
 public class TicTacToe {
 //Creating board with empty spaces
 	private char[] createBoard() {
