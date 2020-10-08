@@ -70,7 +70,7 @@ public class TicTacToe {
 		 * @param location
 		 * @param letter
 		 */
-		private static void makeMove(char[] board, int location, char letter) { boolean spacefree = isSpaceFree(board, location);
+		private static void madeMove(char[] board, int location, char letter) { boolean spacefree = isSpaceFree(board, location);
 			if (spacefree)
 				board[location] = letter;
 		}
@@ -89,7 +89,7 @@ public class TicTacToe {
 		System.out.println("Computer letter is : " + computerLetter);
 		TicTacToe.showBoard(board);
 		int choosenMove = moveLocation(board, userInput);
-		makeMove(board, choosenMove, userLetter);
+		madeMove(board, choosenMove, userLetter);
 		showBoard(board);
 	}
 }
