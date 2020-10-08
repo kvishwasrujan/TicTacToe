@@ -9,7 +9,7 @@ public  class TicTacToe {
 		}
 		return board;
 	}
-	// Player to choose the letter
+	// UC2 For Player to choose a letter
 		private char choosePlayerLetter(Scanner userInput) {
 			System.out.println("Choose your letter: ");
 			char playerLetter = userInput.next().toUpperCase().charAt(0);
