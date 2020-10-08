@@ -1,32 +1,49 @@
 package com.TicTac;
+
 import java.util.Scanner;
-public  class TicTacToe {
+
+public class TicTacToe {
 //Creating board with empty spaces
-	private  char[] createBoard() {
+	private char[] createBoard() {
 		char[] board = new char[10];
 		for (int i = 1; i < 10; i++) {
 			board[i] = ' ';
 		}
 		return board;
 	}
-	// Player to choose the letter
-		private char choosePlayerLetter(Scanner userInput) {
-			System.out.println("Choose your letter: ");
-			char playerLetter = userInput.next().toUpperCase().charAt(0);
-			return playerLetter;
-		}
-	
 
-public static void main(String args[]) {
-	TicTacToe b = new TicTacToe();
-	char[] board = b.createBoard();
-	Scanner userInput = new Scanner(System.in);
-	char userLetter = b.choosePlayerLetter(userInput);
-	char computerLetter;
-	if (userLetter == 'X') {
-		computerLetter = 'O';
-	} else {
-		computerLetter = 'X';
+	/**
+	 * UC2_UserInput
+	 * 
+	 * @param userInput
+	 * @return
+	 */
+	private char choosePlayerLetter(Scanner userInput) {
+		System.out.println("Choose your letter: ");
+		char playerLetter = userInput.next().toUpperCase().charAt(0);
+		return playerLetter;
 	}
-	System.out.println("Computer letter is : " + computerLetter);
-}}
+	//UC3 For Displaying the Board
+		private static void showBoard(char[] board) {
+			System.out.println("\n" + board[1] + "|" + board[2] + "|" + board[3]);
+			System.out.println("______");
+			System.out.println("\n" + board[4] + "|" + board[5] + "|" + board[6]);
+			System.out.println("______");
+			System.out.println("\n" + board[7] + "|" + board[8] + "|" + board[9]);
+		}
+
+	public static void main(String args[]) {
+		TicTacToe b = new TicTacToe();
+		char[] board = b.createBoard();
+		Scanner userInput = new Scanner(System.in);
+		char userLetter = b.choosePlayerLetter(userInput);
+		char computerLetter;
+		if (userLetter == 'X') {
+			computerLetter = 'O';
+		} else {
+			computerLetter = 'X';
+		}
+		System.out.println("Computer letter is : " + computerLetter);
+		TicTacToe.showBoard(board);
+	}
+}
